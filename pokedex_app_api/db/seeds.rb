@@ -15,3 +15,4 @@
 end
 
 puts "Seeded database"
+

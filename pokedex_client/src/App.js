@@ -58,6 +58,7 @@ getPokemons = () => {
 
   render () {
     return (
+      
       <div className="App"> 
       <div className="container">
         <main>
@@ -85,10 +86,10 @@ getPokemons = () => {
         <aside></aside>
       </div>
         <footer />
-      </div>
-    );
+      </div> 
+      );
   }
-}
+} 
 
 export default App;
 
