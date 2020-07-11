@@ -4,10 +4,14 @@
   border: 1px solid red;
 }  */
 
-header {
-  text-align: center;
-  font-size: 100px;
-  color: #4d5052;
+
+  h1 {
+    display: flex;
+    padding: 4px 3px 1px 37px;
+    font-size: 50px;
+    font-weight: 700;
+    gap: normal;
+    justify-content: center;
 }
 
 body {
@@ -63,7 +67,7 @@ body {
   }
   .pokemon {
     margin: 10px 0;
-    padding: 10px 5px;
+    padding: 10px 30px 10px 30px;
     background-color: #28aafd;
     border-radius: 5px;
     text-align: center;

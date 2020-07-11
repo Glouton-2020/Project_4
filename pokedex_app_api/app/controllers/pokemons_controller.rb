@@ -3,7 +3,7 @@ class PokemonsController < ApplicationController
 
   # GET /pokemons
   def index
-    @pokemons = Pokemon.all
+    @pokemons = Pokemon.all.reverse
 
     render json: @pokemons
   end

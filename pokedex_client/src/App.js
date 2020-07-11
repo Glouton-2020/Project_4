@@ -42,8 +42,6 @@ getPokemons = () => {
     })
 
     .then(jsonedPokemon => {
-     // reset the form
-     // add notice to notices
       this.setState({
         formInputs: {
           name: '',
@@ -56,13 +54,25 @@ getPokemons = () => {
     .catch(error => console.log(error))
   }
 
+  handleDelete = (id, index) => {
+		fetch(`http://localhost:3000/pokemons/${id}`, {
+			method: 'DELETE',
+		}).then(() => {
+			this.setState({
+				pokemons: [...this.state.pokemons.slice(0, index), ...this.state.pokemons.slice(index + 1)],
+			});
+		});
+	};
+
   render () {
     return (
       
       <div className="App"> 
-          <div className="header">
-            <h1> Fakerdex </h1>
+
+          <div className="title">
+            <h1> FAKERDEX </h1>
           </div>
+
         <div className="container">
         <main>
           <Pokemons pokemons={this.state.pokemons}/>
