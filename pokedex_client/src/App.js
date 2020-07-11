@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Pokemons from './components/Pokemons.js'
+import Pokemons from './components/Pokemons.js';
 
 class App extends Component {
 
@@ -60,22 +60,28 @@ getPokemons = () => {
     return (
       
       <div className="App"> 
-      <div className="container">
+          <div className="header">
+            <h1> Fakerdex </h1>
+          </div>
+        <div className="container">
         <main>
           <Pokemons pokemons={this.state.pokemons}/>
         </main>
         <nav>
-          <h4>Pick a Pokemon</h4>
-        <form onSubmit={this.handleSubmit}> 
-          <label htmlFor="name">Name</label>
+          <h4>Add your Pokemon</h4>
+          <form onSubmit={this.handleSubmit}> 
+
+          <label htmlFor="name">Pokemon</label>
           <input 
           type="text" id="name" 
           value={this.state.formInputs.name}
           onChange={this.handleChange}/>
+
           <label htmlFor="location">Location</label>
           <input type="text" id="location" 
           value={this.state.formInputs.location}
           onChange={this.handleChange}/>
+
           <label htmlFor="move">Move</label>
           <input type="text" id="move" 
           value={this.state.formInputs.move}
